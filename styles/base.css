@@ -8,7 +8,10 @@
     --text-light: #eee;
     --border-color: #ccc;
 }
-header, main {
+header {
+    font-family: "Roboto", sans-serif;
+}
+main {
     font-family: "Roboto", sans-serif;
 }
 
