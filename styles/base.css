@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+    --main-blue: #1e4d7b;  /* the main */
+    --text-light: #eee;
+    --border-color: #ccc;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #222;
+}
+
+#course-title {
+    display: block; /* it's necessary for all of the width */
+    background-color: var(--main-blue);
+    color: #eee;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.navigation { 
+    display: flex;
+    align-items: center;
+ }
+ .navigation a {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.745);
+    color: #eee;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+    flex: 1 1 auto;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* divide the sections in 2 cols, 2fr & 1fr */
+    gap: 20px; /* space between 2 sections */
+    max-width: 1000px; /* width limit for big screen */
+    margin: 0 auto;
+    padding: 0 20px 40px; /* for the sides & bottom */
+}
+.card {
+    border: 1px solid #ccc; /* soft gray border */
+    border-radius: .5rem; /* rounded corners */
+    overflow: hidden; /* keep rounded corners instead of the backgroud-color in .card h2 */
+    background-color: #fff;
+}
+.card h2 { /* for the header of sections */
+    background-color: var(--main-blue);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0; /* take off the default of h2 */
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+.card-body {
+    padding: 15px; /* space inside 2nd section */
+}
+
+/* ----------------------------------
+for the 1st section
+------------------------------------ */
+.about_me p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+/* for the profile image */
+.about_me img.profile {
+    float: right; /* align to the right */
+    margin: 0 0 10px 15px; /* up, right, bottom, left */
+    border: 1px solid #ccc;
+    width: 120px;
+}
+
+/* related to city */
+.city {
+    clear: both; /* bring the subsection under profile picture */
+    margin-top: 20px;
+}
+.city h3 {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+.city p {
+    line-height: 1.5;
+}
+.city hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+.city figure {
+    float: left; /* flag image to the left */
+    margin: 0 15px 10px 0; /* around the flag */
+    text-align: center;
+}
+
+.city figure img {
+    border: 1px solid #ccc;
+    width: 200px;
+    display: block;
+}
+.city figcaption {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* ----------------------------------
+   The next are only for the 2nd section
+   ------------------------------------ */
+.card-body ul {
+    padding-left: 20px; /* indent for the list */
+}
+.card-body li {
+    margin-bottom: 8px; /* intelined */
+    line-height: 1.4;
+}
+.card-body a {
+    color: #1a0dab; /* the classic for links */
+    text-decoration: underline;
+}
+.card-body a:hover {
+    color: #d32f2f;
+}
+/* until here */
+
+/* ----------------------------------
+   FOOTER
+   ---------------------------------- */
+footer {
+    background-color: var(--main-blue);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+}
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+#lastModified {
+    color: #d4d44a; /* yellow & green for the lastModified */
+    font-size: 0.9rem;
+    font-weight: bold;
+}
