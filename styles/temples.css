@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+    --main-blue: #1e4d7b;  /* the main */
+    --temple-blue: #1f4e79;
+    --text-light: #eee;
+    --border-color: #ccc;
+}
+header {
+    background-color: var(--temple-blue);
+    color: var(--text-light);
+    display: flex; /*align together navigation*/
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--text-light);
+}
+
+#temple_album {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-light);
+    padding: 0.5rem;
+    z-index: 100;
+}
+
+
+/* mobile navigation */
+.nav-list {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--main-blue);
+    flex-direction: column;
+}
+.nav-list.active {
+    display: flex;
+}
+.nav-list li {
+    width: 100%;
+}
+.nav-list a {
+    display: block;
+    padding: 1rem;
+    color: var(--text-light);
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: background-color 0.3s;
+}
+.nav-list a.active {
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    background-color: var(--main-blue);
+}
+
+
+main {
+    font-family: "Roboto", sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+/* -----------------------------------
+   Temples
+   ----------------------------------- */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+}
+
+/* Grid of images - mobile: 1 col */
+.temple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+	grid-gap: 25px;
+	place-items: center;
+}
+.temple-grid figure {
+    text-align: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.temple-grid img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+.temple-grid figcaption {
+    margin-top: 0.5rem;
+    color: #666;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+/* ----------------------------------
+   FOOTER
+   ---------------------------------- */
+footer {
+    background-color: var(--main-blue);
+    color: var(--text-light);
+    text-align: center;
+    padding: .5rem .5rem;
+    margin-top: .5rem;
+}
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+#lastModified {
+    color: #d4d44a; /* yellow & green for the lastModified */
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* --------------------------------------
+   Larger Views
+   --------------------------------------
+
+@media (min-width: 640px) {
+	nav ul {
+		display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+	}
+
+	nav ul li {
+		flex: 1 1 100%;
+	}
+}*/

@@ -1,0 +1,45 @@
+/* for screens >= 640px */
+
+/* hide hamburger menu */
+.menu-toggle {
+    display: none;
+}
+
+/* nav in a row */
+.nav-list {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.nav-list li {
+    flex: 1;
+    max-width: 120px;
+}
+
+.nav-list a {
+    border-bottom: none;
+    padding: 0.75rem 1rem;
+}
+
+.active {
+    color: var(--text-light);
+}
+
+.nav-list a:hover {
+    background-color: var(--text-light);
+    color: var(--temple-blue);
+    border-radius: 4px;
+}
+
+/* Grid of 3 columns */
+.temple-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.temple-grid img {
+    max-width: 100%;
+}
