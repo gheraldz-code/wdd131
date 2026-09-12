@@ -138,19 +138,3 @@ footer p {
     font-size: 0.9rem;
     font-weight: bold;
 }
-
-/* --------------------------------------
-   Larger Views
-   --------------------------------------
-
-@media (min-width: 640px) {
-	nav ul {
-		display: flex;
-        justify-content: flex-end;
-        flex-direction: row;
-	}
-
-	nav ul li {
-		flex: 1 1 100%;
-	}
-}*/
