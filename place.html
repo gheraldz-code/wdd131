@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maceió, Brazil</title>
+    <meta name="author" content="Henry G. Zubieta">
+    <meta name="description" content="This page shows information related to a great place in the world.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Maceió</h1>
+        </header>
+        <main>
+            <div class="hero">
+                <picture>
+                    <source
+                        media="(max-width: 767px)"
+                        srcset="images/hero-maceio-brazil-mob.webp"
+                    >
+
+                    <source
+                        media="(min-width: 768px)"
+                        srcset="images/hero-maceio-brazil-wide.webp"
+                    >
+
+                    <img
+                        src="images/hero-maceio-brazil-wide.webp"
+                        alt="Beach in Maceió, Brazil"
+                        width="2400"
+                        height=auto
+                    >
+                </picture>
+
+                <section class="data-card">
+                    <h2>Data</h2>
+
+                    <dl>
+                        <div>
+                            <dt>Country:</dt>
+                            <dd>Brazil</dd>
+                        </div>
+
+                        <div>
+                            <dt>State:</dt>
+                            <dd>Alagoas</dd>
+                        </div>
+
+                        <div>
+                            <dt>City:</dt>
+                            <dd>Maceió</dd>
+                        </div>
+
+                        <div>
+                            <dt>Language:</dt>
+                            <dd>Portuguese</dd>
+                        </div>
+
+                        <div>
+                            <dt>Currency:</dt>
+                            <dd>Brazilian real</dd>
+                        </div>
+
+                        <div>
+                            <dt>Time Zone:</dt>
+                            <dd>UTC−3</dd>
+                        </div>
+
+                        <div>
+                            <dt>Calling Code:</dt>
+                            <dd>+5582</dd>
+                        </div>
+                    </dl>
+                </section>
+
+                <section class="weather-card">
+                    <h2>Weather <span class="weather-emoji">☀️</span></h2> <!-- for the desktop version -->
+                    <!-- for the mobile version -->
+                    <img src="images/weather-icon.svg" alt="Partly Cloudy" class="weather-icon-svg" width="80" height="80">
+                    
+                    <dl>
+                        <div>
+                            <dt>Temperature:</dt>
+                            <dd>28 °C</dd>
+                        </div>
+
+                        <div>
+                            <dt>Conditions:</dt>
+                            <dd>Partly Cloudy</dd>
+                        </div>
+
+                        <div>
+                            <dt>Wind:</dt>
+                            <dd>14 km/h</dd>
+                        </div>
+
+                        <div>
+                            <dt>Wind Chill:</dt>
+                            <dd>30 °C</dd>
+                        </div>
+                    </dl>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <p>&copy;<span id="currentyear"></span> 🌐 Henry G. Zubieta 🌐 Bolivia</p>
+            <p id="lastModified"></p>
+        </footer>
+    </div>
+</body>
+</html>

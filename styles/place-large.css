@@ -1,0 +1,76 @@
+/* ==============================
+   WIDER VIEW
+   ============================== */
+
+@media screen and (min-width: 768px) {
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    .hero {
+        border-top: 18px solid var(--second-color);
+        border-bottom: none;
+    }
+
+    body {
+        padding: 0;
+        background-color: var(--bg-color);
+    }
+
+    .container {
+        max-width: 100%;
+        box-shadow: none;
+    }
+
+    .data-card,
+    .weather-card {
+        position: absolute;
+        background-color: var(--third-color);
+        color: var(--border-color);
+        padding: 0 20px 20px;
+        box-shadow: 0 2px 8px var(--shadow-color);
+    }
+
+    .data-card {
+        top: 50px;
+        left: 30px;
+        width: 280px;
+    }
+
+    .weather-card {
+        bottom: 100px;
+        right: 30px;
+        width: 280px;
+    }
+
+    .data-card h2,
+    .weather-card h2 {
+        background-color: var(--second-color);
+        color: var(--text-light);
+        margin: 0 -20px 20px;
+        padding: 14px 18px;
+        font-size: 1.5rem;
+    }
+    /* ==============================
+        Desktop
+        ============================== */
+    /* 1. hide the SVG */
+    .weather-icon-svg {
+        display: none !important;
+    }
+
+    /* 2. force to show the emoji in desktop */
+    .weather-emoji {
+        display: inline !important;
+        vertical-align: middle;
+        margin-left: 5px;
+    }
+
+    /* 3. set green the h2 and put + emoji */
+    .weather-card h2 {
+        display: inline-block;
+    }
+
+}
