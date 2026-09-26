@@ -61,16 +61,20 @@
         display: none !important;
     }
 
-    /* 2. force to show the emoji in desktop */
+    /* 2. force to show the emoji in desktop *-/
     .weather-emoji {
         display: inline !important;
         vertical-align: middle;
         margin-left: 5px;
     }
 
-    /* 3. set green the h2 and put + emoji */
+    /* 3. set green the h2 and put + emoji *
     .weather-card h2 {
         display: inline-block;
-    }
+    }*/
+    .weather-card h2::after {
+    content: "☀️";
+    margin-left: 10px;
+}
 
 }
