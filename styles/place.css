@@ -78,8 +78,7 @@ h1 {
     color: var(--border-color);
     margin-bottom: 15px;
     font-size: 1.3rem;
-    font-weight: 400;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* ---------------------------
@@ -140,7 +139,6 @@ footer p {
 }
 
 #lastModified {
-    color: var(--last-color);
     font-size: 0.9rem;
     font-weight: bold;
 }
