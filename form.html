@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-Us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description" content="Product Review form for submitting a product review.">
+    <meta name="author" content="Henry G. Zubieta">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css" media="screen and (min-width: 640px)">
+
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="page-title">Product Review</h1>
+    </header>
+
+    <main>
+
+        <form method="get" action="review.html">
+
+            <!-- Product -->
+            <label for="product">
+                Product Name
+            </label>
+
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
+
+
+            <!-- Rating -->
+            <fieldset class="rating">
+                <legend>Overall Rating</legend>
+
+                <label for="rating-1">
+                    ☆
+                    <input type="radio" id="rating-1" name="rating" value="1" required>
+                </label>
+
+                <label for="rating-2">
+                    ☆☆
+                    <input type="radio" id="rating-2" name="rating" value="2">
+                </label>
+
+                <label for="rating-3">
+                    ☆☆☆
+                    <input type="radio" id="rating-3" name="rating" value="3">
+                </label>
+
+                <label for="rating-4">
+                    ☆☆☆☆
+                    <input type="radio" id="rating-4" name="rating" value="4">
+                </label>
+
+                <label for="rating-5">
+                    ☆☆☆☆☆
+                    <input type="radio" id="rating-5" name="rating" value="5">
+                </label>
+            </fieldset>
+
+            <!-- Installation Date -->
+            <label for="installation-date">
+                Date of Installation
+            </label>
+
+            <input
+                type="date"
+                id="installation-date"
+                name="installation-date"
+                required
+            >
+
+
+            <!-- Useful Features -->
+            <fieldset class="features">
+                <legend>Which features did you find useful in the product?</legend>
+
+                <label for="feature1">
+                    <input
+                        type="checkbox"
+                        id="feature1"
+                        name="features"
+                        value="durability"
+                    >
+                    Durability
+                </label>
+
+                <label for="feature2">
+                    <input
+                        type="checkbox"
+                        id="feature2"
+                        name="features"
+                        value="ease_of_use"
+                    >
+                    Ease of Use
+                </label>
+
+                <label for="feature3">
+                    <input
+                        type="checkbox"
+                        id="feature3"
+                        name="features"
+                        value="performance"
+                    >
+                    Performance
+                </label>
+
+                <label for="feature4">
+                    <input
+                        type="checkbox"
+                        id="feature4"
+                        name="features"
+                        value="design"
+                    >
+                    Design
+                </label>
+            </fieldset>
+
+
+            <!-- Written Review -->
+            <label for="written-review">
+                Written Review (Optional)
+            </label>
+
+            <textarea
+                id="written-review"
+                name="written-review"
+            ></textarea>
+
+
+            <!-- User Name -->
+            <label for="user-name">
+                User Name (optional)
+            </label>
+
+            <input
+                type="text"
+                id="user-name"
+                name="user-name"
+            >
+
+
+            <!-- Submit -->
+            <input
+                type="submit"
+                value="Post Review"
+            >
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌐 Henry G. Zubieta 🌐 Bolivia</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
