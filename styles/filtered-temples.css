@@ -69,10 +69,8 @@ header {
 }
 
 .nav-list a {
-    /*display: block;*/
     display: inline-block;
     padding: 3px 8px;
-    /*padding: 1rem;*/
     color: var(--text-light);
     text-decoration: none;
     text-align: center;
@@ -120,7 +118,7 @@ h1 {
 
 .temple-grid figure {
     text-align: center;
-    background: white;
+    background: var(--text-light);
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px var(--shadow-color);
@@ -159,7 +157,7 @@ footer p {
 }
 
 #lastModified {
-    color: #d4d44a;
+    color: var(--text-light);
     font-size: 0.9rem;
     font-weight: bold;
 }
