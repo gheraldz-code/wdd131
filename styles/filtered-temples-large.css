@@ -1,0 +1,45 @@
+/* -----------------------------------
+   LARGER VIEWS
+   ----------------------------------- */
+
+@media (min-width: 640px) {
+
+    /* Hide hamburger menu */
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Navigation becomes a horizontal row */
+    .nav-list {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background-color: transparent;
+    }
+
+    .nav-list li {
+        flex: 1;
+        max-width: 120px;
+    }
+
+    .nav-list a {
+        border-bottom: none;
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-list a:hover {
+        background-color: var(--text-light);
+        color: var(--temple-blue);
+        border-radius: 4px;
+    }
+
+    /* Temple gallery becomes 3 columns */
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .temple-grid img {
+        max-width: 100%;
+    }
+}
