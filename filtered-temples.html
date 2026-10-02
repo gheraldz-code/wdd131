@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 640px)">
-    <script src="scripts/temples.js" defer></script>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 640px)">
+    <script src="scripts/filtered-temples.js" defer></script>
 </head>
 <body>
     <header>
@@ -21,16 +21,16 @@
                 <span id="menu-icon">&#9776;</span> <!-- hamburger menu -->
             </div>
             <ul class="nav-list">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
+                <li><a href="#" class="active" id="home">Home</a></li>
+                <li><a href="#" id="older-than">Old</a></li>
+                <li><a href="#" id="newer-than">New</a></li>
+                <li><a href="#" id="larger-than">Large</a></li>
+                <li><a href="#" id="smaller-than">Small</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Home</h1>
+        <h1 id="page-title">Home</h1>
         <div class="temple-grid">
             
         </div>

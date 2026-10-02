@@ -13,6 +13,16 @@ mobileMenu.addEventListener("click", () => {
     }
 });
 
+// modify the page title when a link is clicked
+const pageTitle = document.querySelector("#page-title");
+const navLinks = document.querySelectorAll(".nav-list a");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        pageTitle.textContent = link.textContent;
+    });
+});
+
 
 const temples = [
   {
@@ -73,16 +83,102 @@ const temples = [
   },
   // Add more temple objects here...
   {
+    templeName: "Rio de Janeiro Brazil",
+    location: "Rio de Janeiro, Brazil",
+    dedicated: "2022, May, 8",
+    area: 29966,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rio-de-janeiro-brazil/400x250/1-001db7326e638032470a02813c9e47191ef74b0e.jpeg"
+  },
+  {
     templeName: "Medford Oregon",
     location: "Medford, Oregon, United States",
     dedicated: "2000, April, 16",
     area: 10700,
     imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/medford-oregon-temple/medford-oregon-temple-51593.jpg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/medford-oregon/400x250/medford-temple-lds-988399-wallpaper.jpg"
+  },
+  {
+    templeName: "São Paulo Brazil",
+    location: "São Paulo, Brazil",
+    dedicated: "1978, October, 30",
+    area: 59246,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sao-paulo-brazil/400x250/sao-paulo-brazil-temple-lds-187030-wallpaper.jpg"
+  },
+  {
+    templeName: "San Diego California",
+    location: "San Diego, California, United States",
+    dedicated: "1993, April, 25",
+    area: 58005,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-diego-california/400x250/san-diego-temple-765109-wallpaper.jpg"
+  },
+  {
+    templeName: "Idaho Falls Idaho",
+    location: "Idaho Falls, Idaho, United States",
+    dedicated: "1945, September, 23",
+    area: 85624,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/idaho-falls-idaho/2019/400x250/5-Idaho-Falls-Temple-1869448.jpg"
   },
 ];
 
-const nonutahLink = document.querySelector("#nonutah");
+/*const nonutahLink = document.querySelector("#nonutah");
+nonutahLink.addEventListener("click", () => {
+    const filteredTemples = temples.filter(temple => !temple.location.includes("Utah"));
+    createTempleCard(filteredTemples);
+});*/
+const homeLink = document.querySelector("#home");
+homeLink.addEventListener("click", () => {
+    createTempleCard(temples);
+});
+
+
+const olderThanLink = document.querySelector("#older-than");
+function filterTemplesOlderThan(year) {
+    return temples.filter(temple => {
+        const dedicationYear = new Date(temple.dedicated).getFullYear();
+        return dedicationYear < year;
+    });
+}
+olderThanLink.addEventListener("click", () => {
+    const filteredTemples = filterTemplesOlderThan(1900);
+    createTempleCard(filteredTemples);
+});
+
+
+const newerThanLink = document.querySelector("#newer-than");
+function filterTemplesNewerThan(year) {
+    return temples.filter(temple => {
+        const dedicationYear = new Date(temple.dedicated).getFullYear();
+        return dedicationYear > year;
+    });
+}
+newerThanLink.addEventListener("click", () => {
+    const filteredTemples = filterTemplesNewerThan(2000);
+    createTempleCard(filteredTemples);
+});
+
+
+const largerThanLink = document.querySelector("#larger-than");
+function filterTemplesLargerThan(area) {
+    return temples.filter(temple => temple.area > area);
+}
+largerThanLink.addEventListener("click", () => {
+    const filteredTemples = filterTemplesLargerThan(90000);
+    createTempleCard(filteredTemples);
+});
+
+const smallerThanLink = document.querySelector("#smaller-than");
+function filterTemplesSmallerThan(area) {
+    return temples.filter(temple => temple.area < area);
+}
+smallerThanLink.addEventListener("click", () => {
+    const filteredTemples = filterTemplesSmallerThan(10000);
+    createTempleCard(filteredTemples);
+});
+
 
 createTempleCard(temples);
 
