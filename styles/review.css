@@ -4,7 +4,7 @@
     --accent-color: #e9c46a;
     --background-color: #f4f4f4;
     --text-color: #222;
-    --white: #ffffff;
+    --white-color: #ffffff;
     --shadow-color: #0000001A;
     --border-color: #ddd;
 }
@@ -22,7 +22,7 @@ body {
 
 header {
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--white-color);
     text-align: center;
     padding: 1rem;
 }
@@ -34,7 +34,7 @@ main {
 }
 
 .review-card {
-    background-color: var(--white);
+    background-color: var(--white-color);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px var(--shadow-color);
@@ -62,5 +62,5 @@ footer {
     margin-top: 2rem;
     padding: 1rem;
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--white-color);
 }

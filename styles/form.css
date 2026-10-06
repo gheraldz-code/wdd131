@@ -1,6 +1,6 @@
 :root {
     --primary-color: #264653;
-    --secondary-color: #2a9d8f;
+    --secondary-color: #1f7a70;
     --accent-color: #e9c46a;
     --background-color: #f4f4f4;
     --text-color: #222;
@@ -139,8 +139,8 @@ textarea:focus {
    ----------------------------------- */
 
 footer {
-    background-color: var(--main-color);
-    color: var(--text-light);
+    background-color: var(--primary-color);
+    color: var(--white-color);
     text-align: center;
     padding: 0.5rem;
     margin-top: 0.5rem;
