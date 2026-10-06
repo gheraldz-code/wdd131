@@ -27,7 +27,7 @@ const products = [
 ];
 
 
-// GET FORM DATA
+// Get Form data
 
 const params = new URLSearchParams(window.location.search);
 
@@ -39,30 +39,30 @@ const writtenReview = params.get("written-review");
 const userName = params.get("user-name");
 
 
-// FIND PRODUCT
+// Find product
 
 const selectedProduct = products.find(product => product.id === productId);
 
 
-// DISPLAY PRODUCT
+// Display product
 
 document.getElementById("review-message").textContent =
     `Thank you for your review of ${selectedProduct.name}!`;
 
 
-// DISPLAY RATING
+// Display rating
 
 document.getElementById("review-rating").textContent =
     `Rating: ${rating}/5`;
 
 
-// DISPLAY DATE
+// Display date
 
 document.getElementById("review-date").textContent =
     `Installation Date: ${installationDate}`;
 
 
-// FEATURE NAMES
+// Feature names
 
 const featureNames = {
     durability: "Durability",
@@ -77,19 +77,19 @@ document.getElementById("review-features").textContent =
     `Useful Features: ${selectedFeatures.join(", ") || "None"}`;
 
 
-// DISPLAY WRITTEN REVIEW
+// Display written review
 
 document.getElementById("review-text").textContent =
     `Review: ${writtenReview || "No written review provided."}`;
 
 
-// DISPLAY USER
+// Display User
 
 document.getElementById("review-user").textContent =
     `User: ${userName || "Anonymous"}`;
 
 
-// REVIEW COUNT
+// Review count (control the refresh)
 
 const currentReview = window.location.search;
 const lastReview = sessionStorage.getItem("lastReview");
@@ -108,8 +108,8 @@ if (currentReview !== lastReview) {
 const reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
 
 const reviewText = reviewCount === 1
-    ? "review"
-    : "reviews";
+    ? "review" // only for the first (singular)
+    : "reviews"; // after the first (plural)
 
 document.getElementById("review-count").textContent =
     `You have submitted ${reviewCount} ${reviewText}.`;
@@ -118,6 +118,7 @@ document.getElementById("review-count").textContent =
 // localStorage.removeItem("reviewCount"); 
 // and to reset the session storage, you can use:
 // sessionStorage.removeItem("lastReview");
+
 
 // FOOTER
 

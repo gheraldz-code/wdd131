@@ -1,0 +1,21 @@
+@media (min-width: 640px) {
+
+    main {
+        max-width: 700px;
+    }
+
+    form {
+        padding: 2rem;
+    }
+
+    .rating {
+        justify-content: space-around;
+    }
+
+    input[type="submit"] {
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+}
