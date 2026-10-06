@@ -4,7 +4,7 @@
     --accent-color: #e9c46a;
     --background-color: #f4f4f4;
     --text-color: #222;
-    --white: #ffffff;
+    --white-color: #ffffff;
 }
 
 * {
@@ -20,7 +20,7 @@ body {
 
 header {
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--white-color);
     text-align: center;
     padding: 1rem;
 }
@@ -32,7 +32,7 @@ main {
 }
 
 form {
-    background-color: var(--white);
+    background-color: var(--white-color);
     padding: 1.5rem;
     border-radius: 8px;
 }
@@ -117,7 +117,7 @@ input[type="submit"] {
     border: none;
     border-radius: 5px;
     background-color: var(--secondary-color);
-    color: var(--white);
+    color: var(--white-color);
     font-size: 1rem;
     cursor: pointer;
 }
@@ -130,7 +130,7 @@ input[type="submit"]:hover {
 input:focus,
 select:focus,
 textarea:focus {
-    outline: 3px solid var(--accent-color);
+    outline: 3px solid var(--white-color);
     outline-offset: 2px;
 }
 
