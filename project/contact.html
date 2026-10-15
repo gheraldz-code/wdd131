@@ -25,14 +25,47 @@
     </header>
 
     <main>
-
+        <h1>Contact Us</h1>
+        <p>Have a question or want to request a custom design? Fill out the form below and we will get back to you shortly.</p>
+        
+        <form id="contact-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            
+            <div class="form-group">
+                <label for="product-interest">Product Interest:</label>
+                <select id="product-interest" name="product-interest" required>
+                    <option value="">Select a product...</option>
+                    <option value="book-cover">Embroidered Book Cover</option>
+                    <option value="notebook">Handmade Notebook</option>
+                    <option value="planner">Custom Planner</option>
+                    <option value="other">Other / Custom Request</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        
+        <div id="form-feedback" class="feedback-message" aria-live="polite"></div>
     </main>
 
     <footer>
         <p>&copy; 2026 Guely Studio</p>
         <a href="references.html">References</a>
     </footer>
-
+    <script src="scripts/site.js"></script>
 </body>
 
 </html>
