@@ -5,7 +5,7 @@ const products = [
         name: "Handmade Leather Notebooks",
         description: "Handbound notebooks featuring genuine leather covers and decorative stitching.",
         image: "images/cadernos_com_couro.png",
-        category: "notebook"
+        category: "leather-notebook"
     },
     {
         id: 2,
